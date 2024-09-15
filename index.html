@@ -10,9 +10,14 @@
     <main>
 
         <div class="slider__container">
+            <input type="radio" name="meme" id="firstInput" checked>
+            <input type="radio" name="meme" id="secondInput" >
+            <input type="radio" name="meme" id="thirdInput" >
+            <input type="radio" name="meme" id="fourthInput" >
             <div class="slider__wrap">
                 <div class="img__wrap">
-                    <img src="images/51y8GUVKJoL.jpg" alt="1st meme">
+                    <img src="./images/51y8GUVKJoL.jpg" alt="1st meme" id="firstImg">
+                    <img src="./images/b31-92532f841b9349638d226a6c62aa9e85.jpg" alt="2nd meme" id="secondImg">
                 </div>
                 <div class="slider__control-wrap">
                     <div class="meme__title-wrap">
@@ -20,16 +25,16 @@
                     </div>
                     <div class="meme__input-wrap">
                         <div class="input__button" >
-                            <input type="radio" name="meme" checked>
+                            <label for="firstInput" id="firstLabel">
                         </div>
                         <div class="input__button">
-                            <input type="radio" name="meme">
+                            <label for="secondInput" id="secondLabel">
                         </div>
                         <div class="input__button">
-                            <input type="radio" name="meme">
+                            <label for="thirdInput" id="thirdLabel">
                         </div>
                         <div class="input__button">
-                            <input type="radio" name="meme">
+                            <label for="fourthInput" id="fourthLabel">
                         </div>
                     </div>
                 </div>

@@ -20,6 +20,9 @@ main {
     justify-content: center;
     align-items: center;
 }
+input {
+    display: none;
+}
 .slider__wrap {
     width: 100%;
     height: 100%;
@@ -34,6 +37,7 @@ main {
 
 }
 img {
+    display: none;
     object-fit: scale-down;
     margin: 0 auto;
 }
@@ -54,7 +58,36 @@ img {
 .input__button {
     
 }
-input {
+label {
+    display: block;
     height: 2rem;
     width: 2rem;
+    border: 4px solid #999;
+    border-radius: 50%;
+}
+
+#firstInput:checked ~ * #firstLabel{
+    border: 6px solid black;
+}
+#secondInput:checked ~ * #secondLabel{
+    border: 6px solid black;
+}
+#thirdInput:checked ~ * #thirdLabel{
+    border: 6px solid black;
+}
+#fourthInput:checked ~ * #fourthLabel{
+    border: 6px solid black;
+}
+
+
+#firstInput:checked ~ * #firstImg {
+    display: block;
+}
+
+#secondInput:checked ~ * #secondImg {
+    display: block;
+}
+
+#secondImg {
+
 }

@@ -57,11 +57,15 @@ img {
     justify-content: space-between;
 }
 .meme__title-wrap {
-   
+    width: 50%;
+    overflow: hidden;
+   display: flex;
 }
 .meme__title {
-    display: none;
+    flex-basis: 0%;
+    opacity: 0;
     font-size: 2rem;
+    order: 1;
 }
 .meme__input-wrap {
     display: flex;
@@ -123,17 +127,29 @@ label {
 }
 
 #firstInput:checked ~ * #firstTitle {
-    display: block;
+    flex-basis: 100%;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+    order: 0;
 }
 
 #secondInput:checked ~ * #secondTitle {
-    display: block;
+    flex-basis: 100%;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+    order: 0;
 }
 
 #thirdInput:checked ~ * #thirdTitle {
-    display: block;
+    flex-basis: 100%;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+    order: 0;
 }
 
 #fourthInput:checked ~ * #fourthTitle {
-    display: block;
+    flex-basis: 100%;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+    order: 0;
 }

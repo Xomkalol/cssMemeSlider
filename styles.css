@@ -19,6 +19,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease;
 }
 input {
     display: none;
@@ -34,20 +35,32 @@ input {
     width: 100%;
     height: 70%;
     display: flex;
-
+    overflow: hidden;
+}
+.img__container {
+    flex-basis: 0%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 img {
-    display: none;
+    width: 50%;
+    max-width: 30rem;
+    height: auto;
     object-fit: scale-down;
     margin: 0 auto;
+    transition: all 0.4s ease-in;
 }
 .slider__control-wrap {
     display: flex;
     justify-content: space-between;
 }
 .meme__title-wrap {
+   
 }
 .meme__title {
+    display: none;
     font-size: 2rem;
 }
 .meme__input-wrap {
@@ -55,39 +68,72 @@ img {
     gap: 1rem;
 
 }
-.input__button {
-    
-}
+
 label {
-    display: block;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.radio__button {
     height: 2rem;
     width: 2rem;
     border: 4px solid #999;
     border-radius: 50%;
 }
 
-#firstInput:checked ~ * #firstLabel{
+#firstInput:checked ~ * #firstLabel > .radio__button{
     border: 6px solid black;
 }
-#secondInput:checked ~ * #secondLabel{
+#secondInput:checked ~ * #secondLabel > .radio__button{
     border: 6px solid black;
 }
-#thirdInput:checked ~ * #thirdLabel{
+#thirdInput:checked ~ * #thirdLabel > .radio__button{
     border: 6px solid black;
 }
-#fourthInput:checked ~ * #fourthLabel{
+#fourthInput:checked ~ * #fourthLabel > .radio__button{
     border: 6px solid black;
 }
 
 
 #firstInput:checked ~ * #firstImg {
-    display: block;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+    flex-basis: 100%;
 }
 
 #secondInput:checked ~ * #secondImg {
+    transition: all 0.4s ease-in;
+    opacity: 1;
+    flex-basis: 100%;
+}
+
+#thirdInput:checked ~ * #thirdImg {
+    opacity: 1;
+    transition: all 0.4s ease-in;
+    flex-basis: 100%;
+}
+
+#fourthInput:checked ~ * #fourthImg {
+    transition: all 0.4s ease-in;
+    opacity: 1;
+    flex-basis: 100%;
+}
+
+#firstInput:checked ~ * #firstTitle {
     display: block;
 }
 
-#secondImg {
+#secondInput:checked ~ * #secondTitle {
+    display: block;
+}
 
+#thirdInput:checked ~ * #thirdTitle {
+    display: block;
+}
+
+#fourthInput:checked ~ * #fourthTitle {
+    display: block;
 }

@@ -63,6 +63,7 @@ img {
 }
 .meme__title {
     flex-basis: 0%;
+    width: 0%;
     opacity: 0;
     font-size: 2rem;
     order: 1;
@@ -80,6 +81,12 @@ label {
     cursor: pointer;
     align-items: center;
     justify-content: center;
+}
+label:hover .radio__button {
+    border: 6px solid black;
+}
+label:active .radio__button {
+    background-color: black;
 }
 .radio__button {
     height: 2rem;
@@ -128,6 +135,7 @@ label {
 
 #firstInput:checked ~ * #firstTitle {
     flex-basis: 100%;
+    width: 100%;
     transition: all 0.4s ease-in;
     opacity: 1;
     order: 0;
@@ -135,6 +143,7 @@ label {
 
 #secondInput:checked ~ * #secondTitle {
     flex-basis: 100%;
+    width: 100%;
     transition: all 0.4s ease-in;
     opacity: 1;
     order: 0;
@@ -142,6 +151,7 @@ label {
 
 #thirdInput:checked ~ * #thirdTitle {
     flex-basis: 100%;
+    width: 100%;
     transition: all 0.4s ease-in;
     opacity: 1;
     order: 0;
@@ -149,7 +159,149 @@ label {
 
 #fourthInput:checked ~ * #fourthTitle {
     flex-basis: 100%;
+    width: 100%;
     transition: all 0.4s ease-in;
     opacity: 1;
     order: 0;
+}
+
+@media (width >= 320px) and ( width <= 768px )  {
+    main {
+       
+    }
+    .slider__container {
+        padding: 1rem;
+        
+    }
+    input {
+        
+    }
+    .slider__wrap {
+        gap: 2rem;
+    }
+    .img__wrap {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        overflow: hidden;
+    }
+    .img__container {
+        flex-basis: 0%;
+        height: 100%;
+    }
+    img {
+        width: 100%;
+        max-width: 30rem;
+    }
+    .slider__control-wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    .meme__title-wrap {
+        width: 100%;
+        overflow: hidden;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .meme__title {
+        flex-basis: 0%;
+        width: 0%;
+        opacity: 0;
+        font-size: 2rem;
+        order: 1;
+        text-align: center;
+    }
+    .meme__input-wrap {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+       align-items: center;
+    }
+    
+    label {
+        display: flex;
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+    .radio__button {
+        height: 2rem;
+        width: 2rem;
+        border: 4px solid #999;
+        border-radius: 50%;
+    }
+    
+    #firstInput:checked ~ * #firstLabel > .radio__button{
+        border: 6px solid black;
+    }
+    #secondInput:checked ~ * #secondLabel > .radio__button{
+        border: 6px solid black;
+    }
+    #thirdInput:checked ~ * #thirdLabel > .radio__button{
+        border: 6px solid black;
+    }
+    #fourthInput:checked ~ * #fourthLabel > .radio__button{
+        border: 6px solid black;
+    }
+    
+    
+    #firstInput:checked ~ * #firstImg {
+        transition: all 0.4s ease-in;
+        opacity: 1;
+        flex-basis: 100%;
+    }
+    
+    #secondInput:checked ~ * #secondImg {
+        transition: all 0.4s ease-in;
+        opacity: 1;
+        flex-basis: 100%;
+    }
+    
+    #thirdInput:checked ~ * #thirdImg {
+        opacity: 1;
+        transition: all 0.4s ease-in;
+        flex-basis: 100%;
+    }
+    
+    #fourthInput:checked ~ * #fourthImg {
+        transition: all 0.4s ease-in;
+        opacity: 1;
+        flex-basis: 100%;
+    }
+    
+    #firstInput:checked ~ * #firstTitle {
+        flex-basis: 100%;
+        width: 100%;
+        transition: all 0.4s ease-in;
+        opacity: 1;
+        order: 0;
+    }
+    
+    #secondInput:checked ~ * #secondTitle {
+        flex-basis: 100%;
+        width: 100%;
+        transition: all 0.4s ease-in;
+        opacity: 1;
+        order: 0;
+    }
+    
+    #thirdInput:checked ~ * #thirdTitle {
+        flex-basis: 100%;
+        width: 100%;
+        transition: all 0.4s ease-in;
+        opacity: 1;
+        order: 0;
+    }
+    
+    #fourthInput:checked ~ * #fourthTitle {
+        flex-basis: 100%;
+        width: 100%;
+        transition: all 0.4s ease-in;
+        opacity: 1;
+        order: 0;
+    }
 }
